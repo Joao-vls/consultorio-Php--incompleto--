@@ -1,4 +1,6 @@
-*{margin: 0; padding: 0;}
+body{margin: 0; padding: 0; display: flex;
+    align-items: center;
+    justify-content: center;}
 
 .tela_login{
     font-size: 4vmin;
@@ -6,10 +8,7 @@
     text-align: center; 
 }
 .tela_login form{
-    position: absolute;
-    left: 30%;
     margin-top: 10%;
-    width: 40%;
 }
 .tela_login fieldset{
     border-radius: 8px;
@@ -23,9 +22,8 @@
     margin-left: 7vmin;
     margin-right: 7vmin;
     padding: 2vmin 2vmin;
-    width: 27vmax;
 }
 .tela_login input[type="submit"]{
     margin-top: 6vmin;
-    margin-left: 9vmin;
+    margin-left: 19vmin;
 }

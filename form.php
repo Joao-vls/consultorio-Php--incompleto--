@@ -14,8 +14,6 @@ if (isset($_POST['cpf']) && $_POST['cpf'] != ''
 		$usr_vel=mysqli_fetch_assoc($sql_rece);
 		if(password_verify($usr['senha'],$usr_vel['senha'])){
 		if(!isset($_SESSION)){
-			session_cache_limiter('private');
-			session_cache_expire(1);
 			session_start();
 		}
 		$_SESSION['nome']=$usr_vel['nome'];
@@ -23,8 +21,10 @@ if (isset($_POST['cpf']) && $_POST['cpf'] != ''
 		$sql_rece=mysqli_query($conexao,$sql_bus) or die("ERROR");
 		$existe = mysqli_num_rows($sql_rece);
 		if($existe == 1){
+			$_SESSION['adm']=1;
 			header("Location:adm.php");
 			}else{
+				$_SESSION['adm']=0;
 				header("Location:user.php");
 				}
 		}else{
@@ -35,5 +35,6 @@ if (isset($_POST['cpf']) && $_POST['cpf'] != ''
 			}
 	
 }
+
 include "index.php";
 

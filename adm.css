@@ -15,3 +15,14 @@ header{
     height: 15px;
     cursor: pointer;
 }
+.perfil{
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 20%;
+    background-color: rgb(43, 87, 50);
+    display: none;
+}
+header button:focus div{
+    display: block;
+}
